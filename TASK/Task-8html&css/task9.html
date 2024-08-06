@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSL Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .color-box {
+            width: 50px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Color (Left)</th>
+            <th>HSL (Right)</th>
+        </tr>
+        <tr>
+            <td><div class="color-box" style="background-color: hsl(0, 100%, 50%);"></div>Red</td>
+            <td>hsl(0, 100%, 50%)</td>
+        </tr>
+        <tr>
+            <td><div class="color-box" style="background-color: hsl(120, 100%, 50%);"></div>Green</td>
+            <td>hsl(120, 100%, 50%)</td>
+        </tr>
+    </table>
+</body>
+</html>

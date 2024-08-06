@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Order Form</h1>
+        <form action="/submit-order" method="post">
+            <fieldset>
+                <legend>Product Details</legend>
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product_name" required>
+
+                <label for="product-description">Description:</label>
+                <textarea id="product-description" name="product_description" rows="3" required></textarea>
+
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" name="quantity" min="1" required>
+
+                <label for="product-price">Price per Unit (₹):</label>
+                <input type="number" id="product-price" name="price" step="0.01" min="0" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Customer Details</legend>
+                <label for="customer-name">Full Name:</label>
+                <input type="text" id="customer-name" name="customer_name" required>
+
+                <label for="customer-email">Email Address:</label>
+                <input type="email" id="customer-email" name="customer_email" required>
+
+                <label for="customer-phone">Phone Number:</label>
+                <input type="tel" id="customer-phone" name="customer_phone" required>
+
+                <!-- <label for="shipping-address">Shipping Address:</label>
+                <textarea id="shipping-address" name="shipping_address" rows="4" required></textarea>
+
+                <label for="shipping-method">Shipping Method:</label>
+                <select id="shipping-method" name="shipping_method" required>
+                    <option value="standard">Standard Shipping</option>
+                    <option value="express">Express Shipping</option>
+                    <option value="overnight">Overnight Shipping</option>
+                </select> -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Information</legend>
+                <label for="card-name">Name on Card:</label>
+                <input type="text" id="card-name" name="card_name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card_number" pattern="\d{16}" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" pattern="\d{3}" required>
+                
+                <label for="Cod">Cod:</label>
+                <input type="radio" id="cod" name="Cod" >
+            </fieldset>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
